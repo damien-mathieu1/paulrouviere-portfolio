@@ -91,7 +91,7 @@ export default function About() {
                 as="h3"
                 className="font-serif text-3xl leading-tight sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl"
               >
-                I’m a junior artist currently looking for new opportunities in the creative industry. 
+                I’m a junior artist currently looking for new opportunities in the creative industry.
               </TextReveal>
               <TextReveal
                 as="p"
@@ -175,7 +175,7 @@ export default function About() {
       <section className="py-12">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-xl font-semibold sm:text-2xl">Compositing Software</h2>
+            <h2 className="text-xl font-semibold sm:text-2xl">Compositing / Rendering Software</h2>
           </div>
           <div className="col-span-1 md:col-span-3">
             <div
