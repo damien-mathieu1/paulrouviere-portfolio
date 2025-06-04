@@ -17,10 +17,6 @@ function Experiences() {
             >
               My Experience
             </TextReveal>
-            <TextReveal as="p" className="text-gray-500 dark:text-gray-400">
-              Here are some of my work experiences where I&apos;ve turned
-              challenges into accomplishments, making things happen.
-            </TextReveal>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             {experiences.map((experience, index) => (

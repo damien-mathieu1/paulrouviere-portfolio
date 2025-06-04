@@ -32,37 +32,50 @@ function Projects() {
           </div>
 
           <div className="flex items-center justify-center overflow-hidden lg:px-12">
-            <Carousel
-              opts={{
-                align: "start",
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {projects.map((project, index) => (
-                  <CarouselItem
-                    key={`project_${index}`}
-                    className="md:basis-1/2 xl:basis-1/3 2xl:basis-1/4"
-                  >
-                    <div className="h-full">
-                      <ProjectCard
-                        title={project.data.title}
-                        href={project.slugs[0] === "paulrouviere_demoreel" ? "https://vimeo.com/1032997330" : project.url}
-                        description={project.data.description}
-                        tags={project.data.tags}
-                        thumbnail={`/images/projects/${project.slugs[0]}/cover.jpg`}
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-
-              {/* todo: look for a nicer design, remove px-12 to see the new design */}
-              {/* <CarouselPrevious className='z-999 left-0 rounded' variant={"default"} />
-              <CarouselNext className='z-999 right-0 rounded' variant={"default"} /> */}
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+            <div className="w-full">
+              {projects.map((project, index) => (
+                <div
+                  key={`project_${index}`}
+                  className="mb-8 md:hidden"
+                >
+                  <ProjectCard
+                    title={project.data.title}
+                    href={project.slugs[0] === "paulrouviere_demoreel" ? "https://vimeo.com/1032997330" : project.url}
+                    description={project.data.description}
+                    tags={project.data.tags}
+                    thumbnail={`/images/projects/${project.slugs[0]}/cover.jpg`}
+                  />
+                </div>
+              ))}
+              
+              <Carousel
+                opts={{
+                  align: "start",
+                }}
+                className="hidden w-full md:block"
+              >
+                <CarouselContent>
+                  {projects.map((project, index) => (
+                    <CarouselItem
+                      key={`project_${index}`}
+                      className="md:basis-1/2 xl:basis-1/3 2xl:basis-1/4"
+                    >
+                      <div className="h-full">
+                        <ProjectCard
+                          title={project.data.title}
+                          href={project.slugs[0] === "paulrouviere_demoreel" ? "https://vimeo.com/1032997330" : project.url}
+                          description={project.data.description}
+                          tags={project.data.tags}
+                          thumbnail={`/images/projects/${project.slugs[0]}/cover.jpg`}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
